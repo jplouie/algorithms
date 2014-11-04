@@ -32,7 +32,6 @@ function getTestTree() {
   lvl1 = root.add(7).add(5);
   var node7 = lvl1.children[0];
 
-  node7.add(2).add(6).children[1];
   node7.add(2).add(6).children[1].add(5).add(11);
 
   var node5 = lvl1.children[1];
@@ -40,8 +39,6 @@ function getTestTree() {
 
   return tree;
 }
-
-
 
 var tree = getTestTree ();
 console.log(tree.toString());
