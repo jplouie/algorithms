@@ -25,6 +25,19 @@ function Tree(val) {
   return this;
 }
 
+var searchTree = function(tree, value){
+  search(tree.root, value);
+};
+
+var search = function(node, value){
+  if(node.value == value){
+    console.log('Num found: ' + value);
+  }
+  for(var i = 0; i < node.children.length; i++){
+    search(node.children[i], value);
+  }
+};
+
 //reconstruct image
 function getTestTree() {
   var tree = new Tree(2);
@@ -42,3 +55,4 @@ function getTestTree() {
 
 var tree = getTestTree ();
 console.log(tree.toString());
+console.log(searchTree(tree, 5));
